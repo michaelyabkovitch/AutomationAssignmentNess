@@ -24,11 +24,12 @@ namespace AutomationAssignmentNess
             string limit = searchItemData["LIMIT"];
 
             _driverHandler.MoveToPage(_driver, webSiteLink["EBAY"]);
-            //homePage.ClickLogin();
-            //Assert.That(signInPage.PerformFullLogin(userData["USERID"]), Is.True);
+            homePage.ClickLogin();
+            Assert.That(signInPage.PerformFullLogin(userData["USERID"]), Is.True);
 
             //using this to move to the main page because i can't login to a real user
             _driverHandler.MoveToPage(_driver, webSiteLink["EBAY"]);
+
             prodactPage.AddItemsToCart(
                 homePage.SearchItemsByNameUnderPrice(itemName, maxPrice, minPrice, int.Parse(limit)));
             homePage.GoToCart();
