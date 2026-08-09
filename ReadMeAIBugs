@@ -14,13 +14,12 @@ The script starts the browser using `sync_playwright().start()`, but it never pr
 ### 4. Missing Assertions
 The script locates `results` at the end but doesn't do anything with it. A test without an assertion isn't really a test. We need to verify that the search actually returned results.
 
----
 
 ### The Fixed Code
 
 Here is the refactored version using Playwright best practices:
 
-```python
+python:
 from playwright.sync_api import sync_playwright, expect
 
 def test_search_functionality():
