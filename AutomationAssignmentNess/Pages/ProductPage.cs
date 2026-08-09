@@ -7,23 +7,20 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace AutomationAssignmentNess.Pages
 {
-    public class ProdactPage : BasePage
+    public class ProductPage : BasePage
     {
-        ProdactpageLocators prodactpageElments= new ProdactpageLocators();
-        public ProdactPage(IWebDriver driver, WebDriverWait wait) : base(driver, wait)
+        ProdactPageLocators prodactpageElments = new ProdactPageLocators();
+        public ProductPage(IWebDriver driver, WebDriverWait wait) : base(driver, wait)
         {
         }
 
 
         public void AddItemsToCart(List<string> productUrls)
         {
-          
+
             string mainWindow = _driver.CurrentWindowHandle;
             string screenshotsDir = Path.Combine(Directory.GetParent(NUnit.Framework.TestContext.CurrentContext.WorkDirectory).Parent.FullName, "Reports", "Screenshots");
 
@@ -36,20 +33,32 @@ namespace AutomationAssignmentNess.Pages
                 try
                 {
                     Action.NewTab().Navigate(url);
+                   
+                     
+                     
+                    int dropdownCount = _driver.FindElements(prodactpageElments.AllVariantDropdowns).Count;
 
-                    if (_driver.FindElements(prodactpageElments.ColorSelect).Count > 0)
+                    for (int i = 0; i < dropdownCount; i++)
                     {
-                        Action.Click(prodactpageElments.ColorSelect, "Color Dropdown");
+                        
+                        By currentDropdownLocator = prodactpageElments.SpecificVariantDropdown(i);
+                        var currentDropdown = _wait.Until(d =>
+                        {
+                            var elements = d.FindElements(prodactpageElments.AllVariantDropdowns);
+                            return elements.Count > i ? elements[i] : null;
+                        });
+
+                        if (currentDropdown == null) break;
+
+                        Action.ScrollToElement(currentDropdownLocator, $"Variant Dropdown #{i + 1}");
+
+                        _wait.Until(d => currentDropdown.Displayed && currentDropdown.Enabled);
+                        currentDropdown.Click();
 
                         SelectRandomOption(randomGenerator);
                     }
 
-                    if (_driver.FindElements(prodactpageElments.SizeSelect).Count > 0)
-                    {
-                        Action.Click(prodactpageElments.SizeSelect, "Size Dropdown");
-                        SelectRandomOption(randomGenerator);
-                    }
-
+                 
                     Action.Click(prodactpageElments.AddToCard, "Add To Cart Button");
                     Action.WaitForElementToBeAvailable(prodactpageElments.SeeInCartButton, "SeeInCartButton");
                     Action.TakeScreenshot(screenshotsDir, url);

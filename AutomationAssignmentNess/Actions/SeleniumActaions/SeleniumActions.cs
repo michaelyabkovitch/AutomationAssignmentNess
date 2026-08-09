@@ -1,7 +1,6 @@
 ﻿using AutomationAssignmentNess.Handlers;
 using AutomationAssignmentNess.Pages.Locators;
 using OpenQA.Selenium;
-using OpenQA.Selenium.BiDi.BrowsingContext;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.IO;
@@ -14,7 +13,7 @@ namespace AutomationAssignmentNess.Actions.SeleniumActaions
         private IWebDriver _driver;
         private WebDriverWait _wait;
         private GlobalLocators _globalLocators;
-        
+
 
         public SeleniumActions(IWebDriver driver, WebDriverWait wait)
         {
@@ -132,10 +131,10 @@ namespace AutomationAssignmentNess.Actions.SeleniumActaions
 
                         if (el.Displayed && el.Enabled)
                         {
-                            return el; 
+                            return el;
                         }
 
-                        return null; 
+                        return null;
                     }
                     catch (NoSuchElementException)
                     {
@@ -190,25 +189,7 @@ namespace AutomationAssignmentNess.Actions.SeleniumActaions
             ExtentReportHandler.LogInfo($"Screenshot saved successfully for {currentUrl} at: {fullPath}");
         }
 
-        public void WhitForSpinner()
-        {
-
-            try
-            {
-                WebDriverWait shortWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(2));
-                shortWait.Until(d => d.FindElement(_globalLocators.Loader).Displayed);
-            }
-            catch (WebDriverTimeoutException)
-            {
-            }
-
-            _wait.Until(d =>
-            {
-                var elements = d.FindElements(_globalLocators.Loader);
-                return elements.Count == 0 || !elements[0].Displayed;
-            });
-
-        }
+        
 
 
 

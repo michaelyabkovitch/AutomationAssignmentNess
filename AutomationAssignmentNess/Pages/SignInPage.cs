@@ -1,15 +1,10 @@
 ﻿using AutomationAssignmentNess.Pages.Locators;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutomationAssignmentNess.Pages
 {
-    public class SignInPage : BasePage  
+    public class SignInPage : BasePage
     {
         LogInScreenLocators logInScreenLocators = new LogInScreenLocators();
         public SignInPage(IWebDriver driver, WebDriverWait wait) : base(driver, wait)
@@ -19,8 +14,8 @@ namespace AutomationAssignmentNess.Pages
         }
 
 
-        
-        private bool EnterUserId(string userId ,string elementName)
+
+        private bool EnterUserId(string userId, string elementName)
         {
             return Action.SendText(logInScreenLocators.UserId, userId, elementName);
 
@@ -31,7 +26,7 @@ namespace AutomationAssignmentNess.Pages
             return Action.Click(logInScreenLocators.ContinueBtn, "ContinueBtn");
         }
 
-        public bool PerformFullLogin(string userId,string passowrd ="") 
+        public bool PerformFullLogin(string userId, string passowrd = "")
         {
             if (!EnterUserId(userId, "User ID Field")) return false;
             if (!ClickContinue()) return false;
@@ -40,7 +35,7 @@ namespace AutomationAssignmentNess.Pages
 
 
         }
-        
+
 
 
 

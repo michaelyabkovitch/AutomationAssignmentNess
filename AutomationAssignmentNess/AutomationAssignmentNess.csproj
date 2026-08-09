@@ -203,8 +203,8 @@
     <Compile Include="Pages\CartPage.cs" />
     <Compile Include="Pages\Locators\CartPageLocators.cs" />
     <Compile Include="Pages\Locators\GlobalLocators.cs" />
-    <Compile Include="Pages\Locators\ProdactpageLocators.cs" />
-    <Compile Include="Pages\ProdactPage.cs" />
+    <Compile Include="Pages\Locators\ProdactPageLocators.cs" />
+    <Compile Include="Pages\ProductPage.cs" />
     <Compile Include="Tests\TestHelpers\Provider\SearchDataProviders.cs" />
     <Compile Include="Utilities\HelpUtilities.cs" />
     <None Include="Files\LoginUserData.json">
@@ -214,7 +214,7 @@
     <Compile Include="Handlers\ExtendReportHandler.cs" />
     <Compile Include="Handlers\JSONHandler.cs" />
     <Compile Include="Pages\BasePage.cs" />
-    <Compile Include="Pages\Locators\HomePageLoctors.cs" />
+    <Compile Include="Pages\Locators\HomePageLocators.cs" />
     <Compile Include="Pages\Locators\LogInScreenLocators.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\SignInPage.cs" />

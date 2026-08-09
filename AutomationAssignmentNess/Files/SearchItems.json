@@ -1,9 +1,9 @@
 [
   {
-    "ITEMNAME": "Mens Shoes",
+    "ITEMNAME": "hats",
     "MINPRICE": "20",
     "MAXPRICE": "25",
-    "LIMIT"   : "5"
+    "LIMIT": "5"
   },
   {
     "ITEMNAME": "shirts",

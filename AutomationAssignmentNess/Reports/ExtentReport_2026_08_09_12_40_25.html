@@ -1,0 +1,661 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <title></title>
+ <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c439bdbc7bade3d85af3b90e9e69c30ebc87445f/commons/img/logo.png">
+ <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c439bdbc7bade3d85af3b90e9e69c30ebc87445f/commons/img/logo.png">
+ <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@78fa5a2421587b8228150e93142e5ba97178e85b/spark/css/spark-style.css" rel="stylesheet" />
+ <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+ <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@78fa5a2421587b8228150e93142e5ba97178e85b/spark/js/jsontree.js"></script>
+ <style></style>
+</head>
+<body class="spa  standard">
+ <div class="app">
+  <div class="layout">
+   <div class="header navbar">
+ <div class="vheader">
+  <div class="nav-logo">
+   <a href="#">
+	 <div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c43b89d03a7c43dae8bb8f0f078bad1997af6b3b/commons/img/logo.png')"></div>
+   </a>
+  </div>
+  <ul class="nav-left">
+   <li class="search-box">
+	<a class="search-toggle" href="#"><i class="search-icon fa fa-search"></i><i class="search-icon-close fa fa-close"></i></a>
+   </li>
+   <li class="search-input">
+    <input id="search-tests" class="form-control" type="text" placeholder="Search...">
+   </li>
+  </ul>
+  <ul class="nav-right">
+   <li class="m-r-10"><a href="#"><span class="badge badge-primary"></span></a></li>
+   <li class="m-r-10">
+    <a href="#"><span class="badge badge-primary">09/08/2026 12:40:25</span></a>
+   </li>
+  </ul>
+ </div>
+</div>
+   <div class="side-nav">
+ <div class="side-nav-inner">
+  <ul class="side-nav-menu">
+   <li class="nav-item dropdown" onclick="toggleView('test-view')">
+    <a id="nav-test" class="dropdown-toggle" href="#">
+     <span class="ico"><i class="fa fa-list"></i></span>
+    </a>
+   </li>
+            <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+    <a id="nav-dashboard" class="dropdown-toggle" href="#">
+     <span class="ico"><i class="fa fa-bar-chart"></i></span>
+    </a>
+   </li>
+  </ul>
+ </div>
+</div>
+
+   <div class="vcontainer">
+    <div class="main-content">
+     
+
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+      <ul class="tools pull-left">
+        <li><a href="#"><span class="font-size-14">Tests</span></a></li>
+      </ul>
+      <ul class="tools text-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+          <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+             <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>                                     <div class="dropdown-divider"></div>
+            <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+          </ul>
+        </li>
+                      </ul>
+    </div>
+    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item" status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">SearchFlow_ForItem_hats</p>
+            <p class="text-sm">
+              <span>12:40:26</span> / <span>39566.11 ms</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+            <div class="detail-head">
+              <div class="p-v-10">
+                <div class="info">
+                  <h5 class="test-status text-fail">SearchFlow_ForItem_hats</h5>
+                  <span class='badge badge-success'>09/08/2026 12:40:26</span>
+                  <span class='badge badge-danger'>09/08/2026 12:41:06</span>
+                  <span class='badge badge-default'>39566.11 ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+                </div>
+                              </div>
+            </div>
+
+
+<div class="detail-body mt-4">
+  
+
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:28</td>
+        <td>
+Waiting for element 'Search bar' to be ready for text input.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:28</td>
+        <td>
+Attempting to scroll to element 'Search bar'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:29</td>
+        <td>
+Successfully entered text 'hats' into element 'Search bar'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:29</td>
+        <td>
+Waiting for element 'search btn ' to be clickable.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:29</td>
+        <td>
+Attempting to scroll to element 'search btn '.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:32</td>
+        <td>
+Successfully clicked on element 'search btn '.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:32</td>
+        <td>
+Waiting for element 'minVal' to be ready for text input.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:32</td>
+        <td>
+Attempting to scroll to element 'minVal'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:33</td>
+        <td>
+Successfully entered text '20' into element 'minVal'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:33</td>
+        <td>
+Waiting for element 'maxVal' to be ready for text input.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:33</td>
+        <td>
+Attempting to scroll to element 'maxVal'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:33</td>
+        <td>
+Successfully entered text '25' into element 'maxVal'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:33</td>
+        <td>
+Waiting for element 'SubmitPriceRange' to be clickable.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:33</td>
+        <td>
+Attempting to scroll to element 'SubmitPriceRange'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:34</td>
+        <td>
+Successfully clicked on element 'SubmitPriceRange'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:36</td>
+        <td>
+Element 'SearchResulsts' is available.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:36</td>
+        <td>
+Found 5 items.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:36</td>
+        <td>
+open New TAB                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:38</td>
+        <td>
+navigate to https://www.ebay.com/itm/358891554299?_skw=hats&itmmeta=01KZJYAGXT0399DYKTW8VJTKTP&hash=item538f9a85fb:g:wUAAAeSw4qpqdIKd&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xCGGFXnFubB%2B93i0fgeCwvXP8MP8cwp2p%2Fj6rJfekBdS9I716rZVCS%2FKsmB6emwOln1V8%2FlftLpwEtv04c1miQr1K9XzWjAVxsLNbrHOIJH7xqG7sWnTeTO0HbTSRH81QL%2Bfq62Y%2FM4pxj%2F7pL31Wsd1PyXoipj0XX7qlEe6YSxZ9oNceKcqaq8Z0tM0mPHjjK5JuzrvbGC0LlJUqZRpLLEogE%2FYArxjsy9KpNym22q4A%3D%3D%7Ctkp%3ABk9SR5yPqt78Zw                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:39</td>
+        <td>
+Waiting for element 'Add To Cart Button' to be clickable.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:39</td>
+        <td>
+Attempting to scroll to element 'Add To Cart Button'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:39</td>
+        <td>
+Successfully clicked on element 'Add To Cart Button'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:41</td>
+        <td>
+Element 'SeeInCartButton' is available.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:41</td>
+        <td>
+Screenshot saved successfully for https://www.ebay.com/itm/358891554299?_skw=hats&itmmeta=01KZJYAGXT0399DYKTW8VJTKTP&hash=item538f9a85fb:g:wUAAAeSw4qpqdIKd&itmprp=enc%3AAQALAAAAwGfYFPkwiKCW4ZNSs2u11xCGGFXnFubB%2B93i0fgeCwvXP8MP8cwp2p%2Fj6rJfekBdS9I716rZVCS%2FKsmB6emwOln1V8%2FlftLpwEtv04c1miQr1K9XzWjAVxsLNbrHOIJH7xqG7sWnTeTO0HbTSRH81QL%2Bfq62Y%2FM4pxj%2F7pL31Wsd1PyXoipj0XX7qlEe6YSxZ9oNceKcqaq8Z0tM0mPHjjK5JuzrvbGC0LlJUqZRpLLEogE%2FYArxjsy9KpNym22q4A%3D%3D%7Ctkp%3ABk9SR5yPqt78Zw at: C:\Users\Michael\source\repos\AutomationAssignmentNess\AutomationAssignmentNess\Reports\Screenshots\AddToCart_20260809_124041.png                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:41</td>
+        <td>
+open New TAB                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:43</td>
+        <td>
+navigate to https://www.ebay.com/itm/286937863166?_skw=hats&itmmeta=01KZJYAGXTZR4HFSP6BY9WSR33&hash=item42ced453fe:g:1KsAAeSwHnhpFo5k&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xCD8E36r%2BSksBrnM%2FG5B7QqiaustDUXZA1s4ArxIIdM1V6jNlYacgpT6RvBxb2nb%2F78t3NT7ExIJV154bplePBHZRiWgEgVsrbp44x8FjQvzFGd7YRyGomnd0nq3srw1VgadC8q47sYtynUaSuKyFL2z3C%2BpWI8gFVlT5NfrbwzHYyLGaZJLCJGUT%2FycRcWaOTKU4341c6L44Q6apgBZg4zF5P6s5Er7Q6%2BPYxGFd%2BxRFy1PCvPl9DWRIrfqkqTK%2F5Av5YH1fL0P3%2FlveTVG7mz%7Ctkp%3ABFBMnI-q3vxn                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:43</td>
+        <td>
+Attempting to scroll to element 'Variant Dropdown #1'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:44</td>
+        <td>
+Waiting for element 'Add To Cart Button' to be clickable.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:44</td>
+        <td>
+Attempting to scroll to element 'Add To Cart Button'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:44</td>
+        <td>
+Successfully clicked on element 'Add To Cart Button'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:46</td>
+        <td>
+Element 'SeeInCartButton' is available.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:46</td>
+        <td>
+Screenshot saved successfully for https://www.ebay.com/itm/286937863166?_skw=hats&itmmeta=01KZJYAGXTZR4HFSP6BY9WSR33&hash=item42ced453fe:g:1KsAAeSwHnhpFo5k&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xCD8E36r%2BSksBrnM%2FG5B7QqiaustDUXZA1s4ArxIIdM1V6jNlYacgpT6RvBxb2nb%2F78t3NT7ExIJV154bplePBHZRiWgEgVsrbp44x8FjQvzFGd7YRyGomnd0nq3srw1VgadC8q47sYtynUaSuKyFL2z3C%2BpWI8gFVlT5NfrbwzHYyLGaZJLCJGUT%2FycRcWaOTKU4341c6L44Q6apgBZg4zF5P6s5Er7Q6%2BPYxGFd%2BxRFy1PCvPl9DWRIrfqkqTK%2F5Av5YH1fL0P3%2FlveTVG7mz%7Ctkp%3ABFBMnI-q3vxn at: C:\Users\Michael\source\repos\AutomationAssignmentNess\AutomationAssignmentNess\Reports\Screenshots\AddToCart_20260809_124046.png                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:46</td>
+        <td>
+open New TAB                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:48</td>
+        <td>
+navigate to https://www.ebay.com/itm/397166617511?_skw=hats&itmmeta=01KZJYAGXTPQ6PKKMJ6Q20K4DH&hash=item5c78f9a3a7:g:bOEAAeSwh7do8kal&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xBTwZMNTuyC%2B%2FsXdcoDlI6moMmPsVj%2B2A%2BcijQR3ueOal6B6DDF93s81pE7BRWctvEO%2F7KES5TRmdsxzBhj7SsKYHYvnyc24NFSbkZIEiYrxsnY7jBPuE3JqvNiuEY7ymCVfN%2BXCTP7cPag8a4rjcb9lJ49rslGmEaekK0fGmjDf713NGMjhu8nqOL6%2FQys%2F0ix4%2FD7LtRe9VEMsKKQO92OfNU8cwcn9n6w1eecIvrq1YmeESHSm7jxyYDOK8C4L8ckuJVE96eOGtUbtD0L16JY%7Ctkp%3ABFBMnI-q3vxn                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:48</td>
+        <td>
+Attempting to scroll to element 'Variant Dropdown #1'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:49</td>
+        <td>
+Attempting to scroll to element 'Variant Dropdown #2'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:50</td>
+        <td>
+Waiting for element 'Add To Cart Button' to be clickable.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:50</td>
+        <td>
+Attempting to scroll to element 'Add To Cart Button'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:51</td>
+        <td>
+Successfully clicked on element 'Add To Cart Button'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:53</td>
+        <td>
+Element 'SeeInCartButton' is available.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:53</td>
+        <td>
+Screenshot saved successfully for https://www.ebay.com/itm/397166617511?_skw=hats&itmmeta=01KZJYAGXTPQ6PKKMJ6Q20K4DH&hash=item5c78f9a3a7:g:bOEAAeSwh7do8kal&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xBTwZMNTuyC%2B%2FsXdcoDlI6moMmPsVj%2B2A%2BcijQR3ueOal6B6DDF93s81pE7BRWctvEO%2F7KES5TRmdsxzBhj7SsKYHYvnyc24NFSbkZIEiYrxsnY7jBPuE3JqvNiuEY7ymCVfN%2BXCTP7cPag8a4rjcb9lJ49rslGmEaekK0fGmjDf713NGMjhu8nqOL6%2FQys%2F0ix4%2FD7LtRe9VEMsKKQO92OfNU8cwcn9n6w1eecIvrq1YmeESHSm7jxyYDOK8C4L8ckuJVE96eOGtUbtD0L16JY%7Ctkp%3ABFBMnI-q3vxn at: C:\Users\Michael\source\repos\AutomationAssignmentNess\AutomationAssignmentNess\Reports\Screenshots\AddToCart_20260809_124053.png                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:53</td>
+        <td>
+open New TAB                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:55</td>
+        <td>
+navigate to https://www.ebay.com/itm/358370362342?_skw=hats&itmmeta=01KZJYAGXTKVDJ0AQAVCR0274E&hash=item537089c3e6:g:uFAAAOSwQjFirE0i&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xAlPMnX8tFqH%2BBUltIrrt66AymZjQo8Fmu9iEHs7stiDHktk0%2BxySxhPhP3NeJR2PFce3x87PjkaqyBRfUgdN6k8x0LP%2BTBQk1hHpz%2BHrrcnwSXpD%2F4ocRgkmTl%2F5J0JTMZe%2FPqmC7XOdhIvlqPzgmhvQT%2FeiaNwyV%2BBdQGRkT1tqrBddtieTmg3jbNg5TZMLbcCP17Hh1Ez2x5WhMJRszSJHm2cVTyAOx31dBfjV48ijq6DU6nC%2FyxEQi2eHCn0NEmGq7hS2G8%2B5P1mhFUqDvj%7Ctkp%3ABFBMnI-q3vxn                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:55</td>
+        <td>
+Attempting to scroll to element 'Variant Dropdown #1'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:56</td>
+        <td>
+Waiting for element 'Add To Cart Button' to be clickable.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:56</td>
+        <td>
+Attempting to scroll to element 'Add To Cart Button'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:56</td>
+        <td>
+Successfully clicked on element 'Add To Cart Button'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:40:58</td>
+        <td>
+Element 'SeeInCartButton' is available.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:58</td>
+        <td>
+Screenshot saved successfully for https://www.ebay.com/itm/358370362342?_skw=hats&itmmeta=01KZJYAGXTKVDJ0AQAVCR0274E&hash=item537089c3e6:g:uFAAAOSwQjFirE0i&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xAlPMnX8tFqH%2BBUltIrrt66AymZjQo8Fmu9iEHs7stiDHktk0%2BxySxhPhP3NeJR2PFce3x87PjkaqyBRfUgdN6k8x0LP%2BTBQk1hHpz%2BHrrcnwSXpD%2F4ocRgkmTl%2F5J0JTMZe%2FPqmC7XOdhIvlqPzgmhvQT%2FeiaNwyV%2BBdQGRkT1tqrBddtieTmg3jbNg5TZMLbcCP17Hh1Ez2x5WhMJRszSJHm2cVTyAOx31dBfjV48ijq6DU6nC%2FyxEQi2eHCn0NEmGq7hS2G8%2B5P1mhFUqDvj%7Ctkp%3ABFBMnI-q3vxn at: C:\Users\Michael\source\repos\AutomationAssignmentNess\AutomationAssignmentNess\Reports\Screenshots\AddToCart_20260809_124058.png                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:40:58</td>
+        <td>
+open New TAB                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:41:00</td>
+        <td>
+navigate to https://www.ebay.com/itm/307036214553?_skw=hats&itmmeta=01KZJYAGXTR8SX996PXXANGHD8&hash=item477cc8d519:g:GzsAAeSwmRNqRPE3&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xB%2Fh6lHEGmBIXC%2FQzdK0dJQyxpqk08SR7tqJC9cHTBbILYLDnEuvdaTZHRoeSyDq0aQ1hNxlzi2xo5iAAvBQbltEzwBGtDugDzSWbza3v7oZUFo6q79%2BHvDH%2BZtxw6sapVSetJB%2FnDItpHJKL0o%2BZRy9CA7t2DE5xL9RLwGIq%2Bku9l8hM2BlnxNCoDD8VgKsHR7n9hExKm4e8Fh%2F8FPRepok90Aq8ddSrQvf9Z8ntkD3v3d%2FjndUPz02LlCrkC7HMd1mrZh8LkKp%2FuxLPtYVBPU%7Ctkp%3ABk9SR5yPqt78Zw                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:41:00</td>
+        <td>
+Attempting to scroll to element 'Variant Dropdown #1'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:41:01</td>
+        <td>
+Waiting for element 'Add To Cart Button' to be clickable.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:41:01</td>
+        <td>
+Attempting to scroll to element 'Add To Cart Button'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:41:01</td>
+        <td>
+Successfully clicked on element 'Add To Cart Button'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:41:03</td>
+        <td>
+Element 'SeeInCartButton' is available.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:41:03</td>
+        <td>
+Screenshot saved successfully for https://www.ebay.com/itm/307036214553?_skw=hats&itmmeta=01KZJYAGXTR8SX996PXXANGHD8&hash=item477cc8d519:g:GzsAAeSwmRNqRPE3&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xB%2Fh6lHEGmBIXC%2FQzdK0dJQyxpqk08SR7tqJC9cHTBbILYLDnEuvdaTZHRoeSyDq0aQ1hNxlzi2xo5iAAvBQbltEzwBGtDugDzSWbza3v7oZUFo6q79%2BHvDH%2BZtxw6sapVSetJB%2FnDItpHJKL0o%2BZRy9CA7t2DE5xL9RLwGIq%2Bku9l8hM2BlnxNCoDD8VgKsHR7n9hExKm4e8Fh%2F8FPRepok90Aq8ddSrQvf9Z8ntkD3v3d%2FjndUPz02LlCrkC7HMd1mrZh8LkKp%2FuxLPtYVBPU%7Ctkp%3ABk9SR5yPqt78Zw at: C:\Users\Michael\source\repos\AutomationAssignmentNess\AutomationAssignmentNess\Reports\Screenshots\AddToCart_20260809_124103.png                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:41:03</td>
+        <td>
+Waiting for element 'CartButton' to be clickable.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:41:03</td>
+        <td>
+Attempting to scroll to element 'CartButton'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:41:05</td>
+        <td>
+Successfully clicked on element 'CartButton'.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:41:06</td>
+        <td>
+Element 'ItemTotal' is available.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:41:06</td>
+        <td>
+Element 'ShippungTotal' is available.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>אוג 09, 2026 12:41:06</td>
+        <td>
+Element 'Subtotal' is available.                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:41:06</td>
+        <td>
+SUBTOTAL = 667.06                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>אוג 09, 2026 12:41:06</td>
+        <td>
+maxMoneyIwantToSpend = 125                  </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>אוג 09, 2026 12:41:06</td>
+        <td>
+Test Fail :   Assert.That(Convert.ToDouble(prices["SUBTOTAL"]) <= maxMoneyIwantToSpend, Is.True)
+  Expected: True
+  But was:  False
+          
+  <div class="row mb-3">
+   <div class="col-md-3">
+         <img data-featherlight='error_092d3d5b-2512-47ed-94c3-71aa57ac3023.png' src="error_092d3d5b-2512-47ed-94c3-71aa57ac3023.png">
+      </div>
+ </div>
+        </td>
+      </tr>
+  </tbody>
+</table></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="test-content scrollable">
+    <div class="test-content-tools">
+      <ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+    </div>
+    <div class="test-content-detail"><div class="detail-body"></div></div>
+  </div>
+</div>
+
+                    
+
+<div class="container-fluid p-4 view dashboard-view">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0">Started</p>
+          <h3>09/08/2026 12:40:25</h3>
+      </div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0">Ended</p>
+          <h3>09/08/2026 12:41:06</h3>
+      </div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0 text-pass">Tests Passed</p>
+          <h3>0</h3>
+      </div></div>
+    </div>
+    <div class="col-md-3">
+      <div class="card"><div class="card-body">
+          <p class="m-b-0 text-fail">Tests Failed</p>
+          <h3>1</h3>
+      </div></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-title">Tests</h6>
+        </div>
+        <div class="card-body">
+          <div class="">
+            <canvas id='parent-analysis' width='115' height='90'></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div><small data-tooltip='0%'>
+            <b>0</b> tests passed
+            </small>
+          </div>
+          <div>
+            <small data-tooltip='1%'><b>1</b> tests failed, 
+            <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+            <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h6 class="card-title">Log events</h6>
+        </div>
+        <div class="card-body">
+          <div class="">
+            <canvas id='events-analysis' width='115' height='90'></canvas>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div><small data-tooltip='0%'><b>20</b> events passed</small></div>
+          <div>
+            <small data-tooltip='0%'><b>1</b> events failed, 
+            <b data-tooltip='%'>45</b> others
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row"><div class="col-md-12">
+    <div class="card"><div class="card-header"><p>Timeline</p></div>
+      <div class="card-body pt-0"><div>
+        <canvas id="timeline" height="120"></canvas>
+      </div></div>
+    </div>
+  </div></div>
+  <script>
+	var timeline = { "SearchFlow_ForItem_hats":39566.1111 };
+  </script>
+  <div class="row">
+                  <div class="col-md-4 sysenv-container">
+      <div class="card">
+        <div class="card-header"><p>System/Environment</p></div>
+        <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+          <thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Environment</td>
+              <td>QA Automation Test</td>
+            </tr>
+            <tr>
+              <td>Author</td>
+              <td>A True C# Master</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var statusGroup = {
+    parentCount: 1,
+    childCount: 0,
+    grandChildCount: 0,
+    eventsCount: 66,
+
+passParent:0,failParent:1,warningParent:0,skipParent:0,    
+passChild:0,failChild:0,warningChild:0,skipChild:0,infoChild:0,    
+passGrandChild:0,failGrandChild:0,warningGrandChild:0,skipGrandChild:0,infoGrandChild:0,    
+passEvents:20,failEvents:1,warningEvents:0,skipEvents:0,infoEvents:45,  };
+</script>
+
+    </div>
+   </div>
+  </div>
+ </div>
+ <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c439bdbc7bade3d85af3b90e9e69c30ebc87445f/spark/js/spark-script.js"></script>
+<script type='text/javascript'></script>
+</body>
+</html>

@@ -5,9 +5,6 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutomationAssignmentNess.Tests
 {
@@ -17,23 +14,23 @@ namespace AutomationAssignmentNess.Tests
         protected IWebDriver _driver;
         protected WebDriverWait _wait;
         protected DriverHandler _driverHandler;
-        protected Dictionary<string,string> webSiteLink ;
-        protected Dictionary<string, string> userData ;
+        protected Dictionary<string, string> webSiteLink;
+        protected Dictionary<string, string> userData;
         protected List<Dictionary<string, string>> itemData;
 
 
-    [OneTimeSetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
             string workingDirectory = TestContext.CurrentContext.WorkDirectory;
             string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName;
             string reportsFolder = Path.Combine(projectDirectory, "Reports");
-        
+
             if (!Directory.Exists(reportsFolder))
             {
                 Directory.CreateDirectory(reportsFolder);
             }
-          
+
             string reportFileName = $"ExtentReport_{DateTime.Now:yyyy_MM_dd_HH_mm_ss}.html";
             string fullReportPath = Path.Combine(reportsFolder, reportFileName);
             ExtentReportHandler.InitReport(fullReportPath);
@@ -51,6 +48,7 @@ namespace AutomationAssignmentNess.Tests
         [SetUp]
         public void SetupBeforeTest()
         {
+            _driver.Manage().Cookies.DeleteAllCookies();
             string currentTestName = TestContext.CurrentContext.Test.Name;
             ExtentReportHandler.CreateTest(currentTestName);
             webSiteLink = JSONHandler.ConvertJsonToDictionary(Path.Combine(NUnit.Framework.TestContext.CurrentContext.TestDirectory, "Files", "links.json"));

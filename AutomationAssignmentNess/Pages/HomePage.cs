@@ -1,24 +1,17 @@
-﻿using AutomationAssignmentNess.Actions.SeleniumActaions;
-using AutomationAssignmentNess.Handlers;
+﻿using AutomationAssignmentNess.Handlers;
 using AutomationAssignmentNess.Pages.Locators;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace AutomationAssignmentNess.Pages
 {
 
     public class HomePage : BasePage
     {
-        HomePageLoctors homePageLoctors = new HomePageLoctors();
+        HomePageLocators homePageLoctors = new HomePageLocators();
 
         public HomePage(IWebDriver driver, WebDriverWait wait) : base(driver, wait)
         {
@@ -133,7 +126,7 @@ namespace AutomationAssignmentNess.Pages
             return itemUrls;
         }
 
-        private List<string> Paging(List<string> currentList, int limit,string maxPrice)
+        private List<string> Paging(List<string> currentList, int limit, string maxPrice)
         {
             IWebElement oldResultsContainer = Action.WaitForElementToBeAvailable(homePageLoctors.SearchResulsts, "oldResultsContainer");
 
@@ -171,7 +164,7 @@ namespace AutomationAssignmentNess.Pages
             Action.Click(homePageLoctors.CartButton, "CartButton");
         }
 
-     
+
 
 
 

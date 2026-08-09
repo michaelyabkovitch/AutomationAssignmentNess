@@ -1,21 +1,18 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutomationAssignmentNess.Handlers
 {
     public class DriverHandler
     {
-      
+
         /// <summary>
         /// This function create new Driver instent with no option use 
         /// </summary>
         /// <returns></returns>
-        public IWebDriver DriverCreation() {
+        public IWebDriver DriverCreation()
+        {
 
             IWebDriver driver = new ChromeDriver();
 
@@ -26,7 +23,7 @@ namespace AutomationAssignmentNess.Handlers
         {
             try
             {
-           
+
                 driver.Navigate().GoToUrl(url);
 
             }

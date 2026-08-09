@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutomationAssignmentNess.Handlers
 {
@@ -16,7 +13,7 @@ namespace AutomationAssignmentNess.Handlers
             // Check if the provided file path actually exists in the system
             if (!File.Exists(jsonFilePath))
             {
-              
+
                 throw new FileNotFoundException($"JSON file was not found at path: {jsonFilePath}");
             }
 

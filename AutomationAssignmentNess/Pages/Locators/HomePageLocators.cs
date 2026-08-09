@@ -1,14 +1,8 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutomationAssignmentNess.Pages.Locators
 {
-    public class HomePageLoctors 
+    public class HomePageLocators
     {
         public By LogInButtn => By.XPath("//a[contains(@href,'signin.ebay.com')]");
         public By SearchBar => By.Id("gh-ac");
