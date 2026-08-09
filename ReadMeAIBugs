@@ -1,0 +1,40 @@
+# AI Code Review
+
+Here are the main issues I found in the AI-generated Playwright script:
+
+### 1. Unused Imports & Mixing Frameworks
+The script imports `webdriver` from `selenium`, but this is a Playwright test. The import is never used. Mixing frameworks just creates confusion and adds unnecessary dependencies.
+
+### 2. Hardcoded Sleeps
+Using `time.sleep()` is a bad practice. It makes tests flaky and unnecessarily slow. Playwright has a built-in auto-wait feature, meaning it automatically waits for elements to be ready before interacting with them. We don't need manual sleeps.
+
+### 3. Resource Leaks (No Context Manager)
+The script starts the browser using `sync_playwright().start()`, but it never properly stops the Playwright process. If the test fails in the middle, the browser won't close. The correct way to handle this in Python is using a `with` statement so resources are cleaned up automatically.
+
+### 4. Missing Assertions
+The script locates `results` at the end but doesn't do anything with it. A test without an assertion isn't really a test. We need to verify that the search actually returned results.
+
+---
+
+### The Fixed Code
+
+Here is the refactored version using Playwright best practices:
+
+```python
+from playwright.sync_api import sync_playwright, expect
+
+def test_search_functionality():
+    # Use 'with' to ensure the browser closes even if the test fails
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page()
+        
+        page.goto("[https://example.com](https://example.com)")
+
+        # Playwright waits automatically, so time.sleep() is removed
+        page.locator("#search").fill("playwright testing")
+        page.locator(".button").click()
+
+        # Added an assertion to actually validate the test
+        results = page.locator(".result-item")
+        expect(results.first).to_be_visible()
