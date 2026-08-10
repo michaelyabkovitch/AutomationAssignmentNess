@@ -46,6 +46,14 @@ namespace AutomationAssignmentNess.Pages
             return Action.Click(homePageLoctors.SubmitPriceRange, "SubmitPriceRange");
         }
 
+        /// <summary>
+        /// Parses the search results container to extract product URLs, filtering them based on a maximum price threshold.
+        /// It cleans and evaluates price strings (handling 'ILS' currency and price ranges) and safely ignores 
+        /// items with missing data or unparsable formats.
+        /// </summary>
+        /// <param name="limit">The maximum number of valid product URLs to extract.</param>
+        /// <param name="maxPrice">The maximum allowed price. Items exceeding this value are skipped.</param>
+        /// <returns>A list containing the URLs of the products that fall within the price limit.</returns>
         private List<string> GetSearchResults(int limit, string maxPrice)
         {
             try
@@ -126,6 +134,15 @@ namespace AutomationAssignmentNess.Pages
             return itemUrls;
         }
 
+        /// <summary>
+        /// Navigates to the next page of search results to fetch additional items when the current page 
+        /// does not yield enough products to reach the desired limit. Ensures a stable DOM state by waiting 
+        /// for the old results container to become stale before extracting new URLs.
+        /// </summary>
+        /// <param name="currentList">The current list of collected product URLs.</param>
+        /// <param name="limit">The total target number of product URLs to collect.</param>
+        /// <param name="maxPrice">The maximum allowed price for filtering the new results.</param>
+        /// <returns>A combined list of previous and newly fetched product URLs, or null if no further pages are available.</returns>
         private List<string> Paging(List<string> currentList, int limit, string maxPrice)
         {
             IWebElement oldResultsContainer = Action.WaitForElementToBeAvailable(homePageLoctors.SearchResulsts, "oldResultsContainer");
