@@ -30,7 +30,6 @@ namespace AutomationAssignmentNess.Pages
 
             return prices;
 
-
         }
 
         public void AssertCartTotalNotExceeds(double budgetPerItem, int itemsCount)

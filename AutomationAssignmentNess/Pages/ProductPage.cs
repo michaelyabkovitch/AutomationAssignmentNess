@@ -17,7 +17,14 @@ namespace AutomationAssignmentNess.Pages
         {
         }
 
-
+        /// <summary>
+        /// Iterates through the provided product URLs, opens each in a new tab, and attempts to add the item to the cart.
+        /// The method dynamically detects all available variant dropdowns (e.g., Color, Size) and selects a random option for each.
+        /// Note: If the product is an auction item or lacks a standard 'Buy It Now' / 'Add to Cart' button, 
+        /// the method will gracefully catch the failure, skip the current item without performing any action, 
+        /// and continue to the next URL in the list.
+        /// </summary>
+        /// <param name="productUrls">A list of product URLs to process.</param>
         public void AddItemsToCart(List<string> productUrls)
         {
 
@@ -77,6 +84,12 @@ namespace AutomationAssignmentNess.Pages
             }
         }
 
+        /// <summary>
+        /// Retrieves all available options from the currently open dropdown menu, filters for those that are visible and enabled, 
+        /// and randomly selects one to click. After the click, it waits for the dropdown to close (detecting when the selected 
+        /// option becomes invisible or stale) to ensure the UI is ready for subsequent actions.
+        /// </summary>
+        /// <param name="rnd">An instance of the Random class used to generate the random index for selection.</param>
         private void SelectRandomOption(Random rnd)
         {
             var allOptions = _wait.Until(d => d.FindElements(prodactpageElments.DropdownOptions));
@@ -105,12 +118,12 @@ namespace AutomationAssignmentNess.Pages
                 }
                 catch (WebDriverTimeoutException)
                 {
-                    ExtentReportHandler.LogInfo("Waiting for dropdown to close timed out, continuing anyway.");
+                    ExtentReportHandler.LogInfo("Waiting for dropdown to close timed out,continuing anyway.");
                 }
             }
             else
             {
-                ExtentReportHandler.LogInfo("Opened dropdown, but no selectable options were visible on screen.");
+                ExtentReportHandler.LogInfo("Opened dropdown,but no selectable options were visible on screen.");
             }
         }
 

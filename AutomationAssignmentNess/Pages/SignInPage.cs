@@ -9,11 +9,7 @@ namespace AutomationAssignmentNess.Pages
         LogInScreenLocators logInScreenLocators = new LogInScreenLocators();
         public SignInPage(IWebDriver driver, WebDriverWait wait) : base(driver, wait)
         {
-
-
         }
-
-
 
         private bool EnterUserId(string userId, string elementName)
         {
@@ -35,10 +31,6 @@ namespace AutomationAssignmentNess.Pages
 
 
         }
-
-
-
-
 
     }
 }
