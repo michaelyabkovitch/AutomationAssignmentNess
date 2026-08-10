@@ -18,9 +18,14 @@ It covers searching for items, applying price filters, selecting product variant
 ## Notes & Assumptions
 
 * **Login:** eBay has aggressive bot detection and Captchas that frequently block automated logins. To keep the test stable and focus on the core flow,
-*  the automation skips the login phase and performs the purchasing steps as a Guest.
+* the automation skips the login phase and performs the purchasing steps as a Guest.
+* **Auction/Bid Items:** If the automation selects an item that cannot be added directly to the cart (e.g., requires placing a bid instead of "Buy It Now"),
+*  the system is designed to gracefully skip it and move to the next available item link.
+* **Dynamic Variants & UI Inconsistencies:** If a product requires picking a size or color before adding it to the cart, the code handles this by randomly selecting an available visible option. However, due to extreme inconsistency in eBay's UI across different product categories (dropdown names and options constantly change), there might be edge cases where selection fails.
+*  The automation does not account for every possible unexpected UI variation.
+* **Price Calculation & Cart Total:** The requested logic was to calculate the expected total based on (Number of items * Max price). However, the framework extracts the actual price directly from the cart's 'Subtotal'.
+*  Since the Subtotal often includes shipping fees, tests might fail if the final sum exceeds the strict expected mathematical limit.
 * **Currency:** The tests assume prices are displayed in ILS (as per regional defaults) and parse the text accordingly.
-* **Dynamic Variants:** If a product requires picking a size or color before adding it to the cart, the code handles this by randomly selecting an available visible option.
 
 ## Reporting
 
